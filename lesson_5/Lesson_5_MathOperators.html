@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Матиматические операции с переменными</title>
+</head>
+<body>
+<script type="text/javascript">
+   /* z = y - x;
+    z = y + x;
+    z = y * x;
+    z = y / x;// (на ноль делить нельзя);
+    z = y % x;
+    z = z + 20;
+    z += 20; // Эта запись аналогична той, что находиться выше
+    */
+    var z = 10;
+    z += 1;
+    z++; // Аналогично тому, что прописано выше
+
+   var x = 5;
+   var y;
+   var result;
+   y = 5;
+   result = x + y;
+   document.write(result);
+   result *= x;
+   document.write("<br>" + result);
+   result--;
+   document.write("<br>" + result);
+   document.write("<br>");
+   document.write(x + " + " + y + " = " + (x + y));
+   document.write("<br>");
+   var str_1 = "12";
+   var str_2 = Number("24");
+   document.write(Number(str_1) + str_2);
+   document.write("<br>");
+   var bool;
+   var z = 7;
+   var d = 7;
+   bool = z >= d;
+   document.write(bool);
+   document.write("<br>");
+   document.write(15 + " % " + 7 + " = " + (15 % 7));
+
+</script>
+</body>
+</html>
