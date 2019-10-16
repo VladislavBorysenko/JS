@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Array</title>
 </head>
 <body>
+<script type="text/javascript">
+    var arr = new Array("str", 1.23, 1, 34, 'w');//создали новый массив, arr - имя массива.Массив Создаем как обьект
+    document.write(arr.length);//функци length показывает сколько элементов находится в массиве
+
+    //перебор массива церез цикл for
+    for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "</br>")
+    }
+
+    //присвоим значени новому массиву
+    var y = 0;
+    arr = new Array();
+    for (var i = 0; i < 10; i++) {
+        arr[i] = i * 3;
+        document.write(arr[i] + "</br>")
+        y = i;
+    }
+    document.write(arr[y] + "</br>")
+
+    //найдем сумму всех элементов массива
+    var sum=0;
+    for (var i = 0; i <arr.length ; i++)
+        sum+=arr[i];
+
+    document.write("среднее арифметическое значени массива равно "+(sum/arr.length));
+</script>
 
 </body>
 </html>
