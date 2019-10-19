@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Многомерные массивы</title>
+</head>
+<body>
+<script type="text/javascript">
+    //создаем массивы
+    var arr_1 = new Array();
+    var arr_2 = new Array();
+    var arr_3 = new Array();
+    //запалняем массивы
+    for (let i = 0; i <5 ; i++) {arr_1[i]=i;}
+    for (let i = 0; i <10 ; i++) {arr_2[i]=i;}
+    for (let i = 0; i <15 ; i++) {arr_3[i]=i;}
+    //создаем трехмерный массив(обьединяем массивы)
+    var arr = new Array(arr_1,arr_2,arr_3);
+    //оброщаемся к элименту многомерного массива
+    document.write(arr[0][2]);
+    document.write("<br/>")
+    document.write("<br/>")
+
+    //arr [0] - первый массив [2]- третий єлемент первого массива
+
+    //для  вывода массива используем цикл for в цикле for
+    for (let x = 0; x <arr.length ; x++) {
+        for (let j = 0; j <arr[x].length ; j++) {
+           document.write(arr[x][j]+" ");
+        }
+        document.write("<br/>")
+    }
+</script>
+</body>
+</html>
