@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global and local variables</title>
+</head>
+<body>
+<script type="text/javascript">
+    var global = 12;
+    var i = 10;
+    function test() {
+        global++;
+        var i=5; // переменная і локальная, так как мы её обьявляем в функции
+    }
+    test()
+    document.write("global = "+ global+ " local "+i);
+</script>
+</body>
+</html>
