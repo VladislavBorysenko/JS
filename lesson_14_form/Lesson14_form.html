@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script type="text/javascript">
+        function valid() {
+
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post" name="test" onsubmit="valid()">
+    <label for="name">"Имя"</label>
+    <input type="text" name="name" placeholder="Имя" id="name"/> <br/>
+    <label for="password">"Пароль"</label>
+    <input type="password" name="password" placeholder="Пароль" id="password"/> <br/>
+    <label for="RePassword">"ПроверкаПароль"</label>
+    <input type="password" name="RePassword" placeholder="Введите Пароль" id="RePassword"/> <br/>
+    <span>Пол</span>
+    <input type="radio" name="state" id="state" value="Мужской"/>
+    <label>Мужской</label>
+    <input type="radio" name="state" id="state" value="Женский"/>
+    <label>Женский</label><br/>
+    <input type="submit" name="submit" value="Готово">
+</form>
+</body>
+</html>
