@@ -4,25 +4,65 @@
     <meta charset="UTF-8">
     <title>Form</title>
     <script type="text/javascript">
-        function valid() {
+        function valid(form) { //передаем в нашу форму в функцию valid
+            var fail = false;
+            var name = form.name.value; //путь к значению нашей переменной
+            var email = form.email.value;
+            var password = form.password.value;
+            var RePassword = form.RePassword.value;
+            var state = form.state.value;
+
+            /*перечислени обязательных знаков
+            Начиннается Имейл [0-9a-z_] или с цифр от 0 до 9 или с букв от  а до z, далее обязательно идет @
+            затем одна точка \., потом маленькие буквы [a-z] в это м блокедолжно содержаться от двух до пяти букв
+            {2,5},
+            /i - указывает на то что нам не важен регистр букв
+             */
+
+            var adr_pattern = /[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i; //регулярное ввырожение
+
+
+            if (name == "" || name == " ") {
+                fail = "Вы не ввели имя";
+            } else if (email.split('@').length - 1 == 0) {
+                //альтернатива регулярным выраженимя. разбиваем текст на элементы массива @, если это не получилось ==0
+                //тогда мі ввелинаш емайл не правильно
+                fail = "Вы ввели емайл не правильно"
+            }
+            /*  else if (adr_pattern.test(email)==false){
+                  fail = "Вы ввели емайл не правильно"
+              }*/
+            else if (password == "" || password == " ") {
+                fail = "Вы не ввели пароль";
+            } else if (password != RePassword) {
+                fail = "Пароли не совпадают";
+            } else if (state = "") {
+                fail = " Укажите пол";
+            }
+            if (fail) {
+                alert(fail);
+            } else //если все правильно мы переенапровляем на http://google.com
+                window.location = "http://google.com";
 
         }
     </script>
 </head>
 <body>
-<form action="" method="post" name="test" onsubmit="valid()">
+<form action="" method="post" name="test" id="form">
     <label for="name">"Имя"</label>
-    <input type="text" name="name" placeholder="Имя" id="name"/> <br/>
+    <input type="text" name="name" placeholder="Имя" id="name"/> <br/><br/>
+    <label for="email">"Email"</label>
+    <input type="text" name="email" placeholder="Email" id="email"/> <br/><br/>
     <label for="password">"Пароль"</label>
-    <input type="password" name="password" placeholder="Пароль" id="password"/> <br/>
+    <input type="password" name="password" placeholder="Пароль" id="password"/> <br/><br/>
     <label for="RePassword">"ПроверкаПароль"</label>
-    <input type="password" name="RePassword" placeholder="Введите Пароль" id="RePassword"/> <br/>
+    <input type="password" name="RePassword" placeholder="Введите Пароль" id="RePassword"/> <br/><br/>
     <span>Пол</span>
-    <input type="radio" name="state" id="state" value="Мужской"/>
-    <label>Мужской</label>
-    <input type="radio" name="state" id="state" value="Женский"/>
-    <label>Женский</label><br/>
-    <input type="submit" name="submit" value="Готово">
+    <input type="radio" name="state" id="male" value="Мужской"/>
+    <label for="male">Мужской</label>
+    <input type="radio" name="state" id="female" value="Женский"/>
+    <label for="female">Женский</label><br/><br/>
+    <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово">
 </form>
 </body>
 </html>
