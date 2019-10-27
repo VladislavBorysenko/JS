@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+
+        let counter = 10 ;
+        let intervalNumbers=setInterval(numbersToConsole,120);
+
+        function numbersToConsole(){
+
+            console.log(counter);
+            counter ++;
+            if (counter>32){
+               clearInterval(intervalNumbers);
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="numbersToConsole()">
+<span id = "count">9</span>
 
 </body>
 </html>
