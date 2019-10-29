@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var date = new Date(); //Обьект Date берет текущую дату и время
+    text = "Now year is - " + date.getFullYear(); //вызываем текущий год
+    text += "\n Now month is - " + date.getMonth(); //вызываем текущий месяц
+    text += "\n Now date is - " + date.getDate(); //вызываем текущую дату
+    text += "\n Now hour is - " + date.getHours(); //вызываем текущий час
+    text += "\n Now minute is - " + date.getMinutes(); //вызываем текущую минуту
+    text += "\n Now second is - " + date.getSeconds(); //вызываем текущую секунду
+
+    //alert(text);
+    // получаеться только с типом var
+
+    var date = new Date(2000, 0, 12, 14, 23, 43);
+    text = "Now year is - " + date.getFullYear();
+    text += "\n Now month is - " + date.getMonth();
+    text += "\n Now date is - " + date.getDate();
+    text += "\n Now hour is - " + date.getHours();
+    text += "\n Now minute is - " + date.getMinutes();
+    text += "\n Now second is - " + date.getSeconds();
+    date.setMinutes(34);// устанавливаем минуті
+
+    alert(text);
+</script>
+</body>
+</html>
