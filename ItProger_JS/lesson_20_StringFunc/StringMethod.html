@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var string = "SOME text";
+    var text = "Длин строки равна -" + string.length;//узнаем длину строки
+    text += "\n Строка в верхнем регистре - " + string.toUpperCase();// перевод текста в верхний регистр
+    text += "\n Строка в ниженм регистре - " + string.toLowerCase();// текст в нижнем регистре
+    text += "\n Обрезанная строка - " + string.substring(1, 4);//обрезка строки с 1 по 4 символ
+    text += "\n третий символ в строке - " + string.charAt(3);
+    text += "\n te начинаетс с индекса - " + string.indexOf("te");
+
+    alert(text);
+</script>
+
+</body>
+</html>

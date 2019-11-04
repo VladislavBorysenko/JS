@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var string = "ASDПросто текстASD";
+    // Первое задание
+    var newStr = string.substring(0, string.length - 3); // Обрезаем все символы, кроме 3 последних
+    console.log("Обрезанная строка - " + newStr);
+
+    // Второе задание
+    var lowerCase = newStr.substring(3, 0);
+    // Обрезанную часть в нижний регистр + добавляем прежнюю строку, но без первых трех элементов
+    var result = lowerCase.toLowerCase() + newStr.substring(3);
+    console.log("Нижний регистр - " + result);
+
+    // Третье задание
+    console.log(result[0] + result[1] + result[2]);
+</script>
+</body>
+</html>
