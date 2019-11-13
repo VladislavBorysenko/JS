@@ -7,15 +7,24 @@
 <body>
 <script type="text/javascript">
     let message;
-    let uN;
-    uN = prompt("Who are you ?");
-   if(uN =="I am boss"){
-       alert('Hello');
-   }else if (uN == null){
-       alert("Abort");
-   }else {
-       alert('Password error');
-   }
+    let login;
+    let password;
+
+    login = prompt("Who are you ?");
+    if (login == "admin") {
+        password = prompt("Enter password");
+        if (password == 'admin') {
+            alert('Hello Boss');
+        } else if (password == null || password == '') {
+            alert('cancel');
+        } else {
+            alert('wrong password');
+        }
+    } else if (login == null) {
+        alert('cancel');
+    } else {
+        alert('Password error');
+    }
 
 
 </script>
