@@ -1,0 +1,50 @@
+Index: lesson_15_timer/Lesson_15_timer.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lesson_15_timer/Lesson_15_timer.html	(revision d86064c14ba00e96dc0f7f3c3e88d4c79bf13f96)
++++ lesson_15_timer/Lesson_15_timer.html	(date 1572211424921)
+@@ -32,7 +32,7 @@
+     </script>
+ </head>
+ <body onload="timer()">
+-Секунда прошло <span id="count">-1</span>
++Секунда прошла <span id="count">-1</span>
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Index: lesson_15_timer/HomeWork_15.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lesson_15_timer/HomeWork_15.html	(revision d86064c14ba00e96dc0f7f3c3e88d4c79bf13f96)
++++ lesson_15_timer/HomeWork_15.html	(date 1572212290872)
+@@ -3,8 +3,23 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Title</title>
++    <script type="text/javascript">
++
++        let counter = 10 ;
++        let intervalNumbers=setInterval(numbersToConsole,120);
++
++        function numbersToConsole(){
++
++            console.log(counter);
++            counter ++;
++            if (counter>32){
++               clearInterval(intervalNumbers);
++            }
++        }
++    </script>
+ </head>
+-<body>
++<body onload="numbersToConsole()">
++<span id = "count">9</span>
+ 
+ </body>
+ </html>
+\ No newline at end of file
